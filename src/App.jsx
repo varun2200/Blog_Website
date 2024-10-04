@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { useDispatch } from 'react-redux';
 import authservice from './appwrite/auth';
@@ -25,7 +23,7 @@ function App() {
   },[])
 
   return !loading ? (
-    <div className='min-h-screen flex '> 
+    <div className='min-h-screen flex bg-gray-100 '> 
       <div className='w-full block'>
         <Header />
         <main>

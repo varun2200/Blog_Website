@@ -38,7 +38,7 @@ function Signup(){
                 <p>
                     Already have an account?&nbsp;
                     <Link
-                    to="/signup"
+                    to="/login"
                     className="font-medium text-primary transition-all duration-200 hover:underline"
                     >Sign In</Link>
                 </p>
@@ -71,10 +71,10 @@ function Signup(){
                             required:true,
                         })}
                         />
-                        <button
+                        <Button
                         type="submit"
                         className="px-4 py-2 rounded-lg"
-                        >Create Account</button>
+                        >Create Account</Button>
                     </div>
                 </form>
             </div>

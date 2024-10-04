@@ -4,6 +4,7 @@ import Logo from "../Logo";
 import LogoutBtn from "./LogoutBtn";
 import { Link, useNavigate } from "react-router-dom"; 
 import { useSelector } from "react-redux";
+import Button from "../Button";
 
 function Header(){
     //const authStatus = useSelector((state)=>state.auth.status)
@@ -22,13 +23,13 @@ function Header(){
             active: !authStatus,
         },
         {
-            name:"Logout",
-            slug:"/logout",
+            name:"Signup",
+            slug:"/signup",
             active: !authStatus,
         },
         {
-            name:"Signup",
-            slug:"/signup",
+            name:"Logout",
+            slug:"/logout",
             active: !authStatus,
         },
         {
@@ -43,21 +44,22 @@ function Header(){
         }
     ]
     return(
-        <header className = 'py-3 shadow bg-gray-500'>
+        <header className = 'py-3 shadow bg-blue-100'>
             <Container>
                 <nav>
                     <div className="mr-4">
                         <Link to = '/'>
-                         <Logo width = '70px'/>
+                        <Logo width = '70px'/>
                         </Link>
                     </div>
                     <ul className="flex ml-auto">
                         {naItems.map((item)=> item.active?(
                             <li key= {item.name}>
                               <button
-                              onClick={()=>navigate(item.slug)}
-                              className="inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full">
-                                {item.name}</button>  
+                               onClick={()=>navigate(item.slug)}
+                               className="inline-block px-6 py-2 duration-200 hover:bg-yellow-300 rounded-full text-red-500">
+                                {item.name}
+                              </button>  
                             </li>
                         ):null)}
                         {authStatus && (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authlogin } from "../store/authslice";
 import Button from "./Button";
-import Input from "./Input";
+import Input_1 from "./Input";
 import Logo from "./Logo"
 import authservice from "../appwrite/auth";
 import { useForm } from "react-hook-form";
@@ -16,12 +16,6 @@ function Login_1(){
     const login1 = async(data)=>{
         seterror("")
         try {
-            // const existingSession = await authservice.getCurrentUser();
-        
-            // if (existingSession) {
-            //     // If there's an active session, you can log out first
-            //     await authservice.logout(); // Assuming your auth service has a logout function
-            // }
             const session = await authservice.login(data)
             if(session){
                 const userData = await authservice.getCurrentUser()
@@ -53,7 +47,7 @@ function Login_1(){
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
                 <form onSubmit={handleSubmit(login1)} className="mt-8">
                     <div className="space-y-5">
-                        <Input
+                        <Input_1
                         label = "Email: "
                         placeholder = "Enter your email"
                         type = "email"
@@ -64,7 +58,7 @@ function Login_1(){
                             }
                         })}
                         />
-                        <Input 
+                        <Input_1 
                         label = "Password: "
                         type = "password"
                         placeholder = "Enter your password"
@@ -72,10 +66,10 @@ function Login_1(){
                             required:true,
                         })}
                         />
-                        <button
+                        <Button
                         type="submit"
                         className="px-4 py-2 rounded-lg"
-                        >Sign In</button>
+                        >Sign In</Button>
                     </div>
                 </form>
             </div>
