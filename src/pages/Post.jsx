@@ -24,14 +24,26 @@ export default function Post() {
         } else navigate("/");
     }, [slug, navigate]);
 
-    const deletePost = () => {
-        service.deletePost(post.$id).then((status) => {
+    const deletePost = async () => {
+        if (!post) return;
+    
+        try {
+            // Delete post and image asynchronously
+            const status = await service.deletePost(post.$id);
             if (status) {
-                service.deleteFile(post.featuredImage);
+                await service.deleteFile(post.featuredImage);
+                
+                // Clean up local state
+                setPost(null);
+    
+                // Navigate away after deletion
                 navigate("/");
             }
-        });
+        } catch (error) {
+            console.error("Error deleting the post or file:", error);
+        }
     };
+    
 
     return post ? (
         <div className="py-8">

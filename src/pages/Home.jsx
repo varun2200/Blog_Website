@@ -13,8 +13,8 @@ function Home(){
             }
         })
     },[])
-    if(posts.length === 0){
     const authStatus = useSelector((state) => state.auth.status);
+    if(posts.length === 0){
         return(
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
