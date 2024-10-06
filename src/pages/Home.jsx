@@ -20,22 +20,12 @@ function Home(){
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
+                            
                             {!authStatus && <h1 className="text-2xl font-bold hover:text-gray-500">
                                 Login to read posts
                             </h1>}
                             {authStatus && <h1 className="text-2xl font-bold hover:text-gray-500">There are no posts yet.</h1>}
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
+                            
                         </div>
                     </div>
                 </Container>

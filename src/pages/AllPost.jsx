@@ -13,23 +13,9 @@ function AllPosts(){
     if(posts.length === 0){
         return(
             <div >
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                
                 <h1 className="text-2xl font-bold hover:text-gray-500">There are no posts yet.</h1>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                
             </div>
         )
     }

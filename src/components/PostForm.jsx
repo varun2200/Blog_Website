@@ -42,7 +42,7 @@ function PostForm({post}){
                 data.featuredImage = fileId
                 const dbPost = await service.createPost({
                     ...data,
-                    featuredImage: file.$id,
+                    
                     userId: userData.$id,
                 })
                 if(dbPost){

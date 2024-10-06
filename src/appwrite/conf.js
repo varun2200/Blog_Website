@@ -86,7 +86,7 @@ export class Service{
                 queries,
             )
         } catch (error) {
-            throw error;
+            // throw error;
             return false;
         }
     }

@@ -1,42 +1,33 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Ensure html and body cover the full screen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0f2ff;
+}
+
+/* Wrapper for the entire app */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the content area fills at least the height of the screen */
+}
+
+/* Content area should take available space */
+.content {
+  flex-grow: 1; /* Makes sure content takes the remaining space and pushes the footer down */
+  padding: 20px;
+  background-color: #f0f4f8; /* Can be any background you like */
+}
+
+/* Footer stays at the bottom only if content is not enough to push it */
+footer {
+  width: 100%;
+  background-color: #007bff;
+  padding: 20px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
