@@ -13,6 +13,7 @@ import AllPosts from './pages/AllPost.jsx'
 import AddPost from './pages/AddPost.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
+import MyPosts from './pages/MyPosts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,14 @@ const router = createBrowserRouter([
         element:(
           <AuthLayout authentication >
             <AddPost />
+          </AuthLayout>
+        )
+      },
+      {
+        path:"/my-posts",
+        element:(
+          <AuthLayout authentication>
+            <MyPosts />
           </AuthLayout>
         )
       },

@@ -24,7 +24,6 @@ function App() {
 
   return !loading ? (
     <div className='min-h-screen app-wrapper bg-blue-100 '> 
-      
         <Header />
         <main className='content'>
         <Outlet />

@@ -2,13 +2,17 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import authservice from "../../appwrite/auth";
 import { logout } from "../../store/authslice";
+import { useNavigate } from "react-router-dom";
 
 function LogoutBtn(){
     const dispatch = useDispatch();
+    const navigate = useNavigate()
     const logoutHandler = ()=>{
         authservice.logout().then(()=>{
             dispatch(logout());
-        })
+            navigate("/");
+            window.location.reload()
+        }).catch(error=>console.error("Logout failed", error))
     }
     return(
         <button

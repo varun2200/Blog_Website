@@ -14,7 +14,7 @@ function AllPosts(){
         return(
             <div >
                 
-                <h1 className="text-2xl font-bold hover:text-gray-500">There are no posts yet.</h1>
+                <h1 className="text-2xl font-bold hover:text-gray-500 text-center">There are no posts yet.</h1>
                 
             </div>
         )

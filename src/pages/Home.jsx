@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import service from "../appwrite/conf";
 import { Container, PostCard } from "../components";
-import authservice from "../appwrite/auth";
+// import authservice from "../appwrite/auth";
 import { useSelector } from "react-redux";
 
 function Home(){
