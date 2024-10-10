@@ -44,7 +44,7 @@ function Signup(){
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
                 <form onSubmit={handleSubmit(create)}>
-                    <div className="space-y-5">
+                    <div className="space-y-5 text-center">
                         <Input_1 
                         label = "Name"
                         placeholder = "Enter your name"
